@@ -31,9 +31,7 @@ class AuthorizationsController extends Controller
           $attributes['openid'] = $data['openid'];
           $attributes['weixin_session_key'] = $data['session_key'];
 
-          User::create($attributes);
-
-          $user = User::where('openid',$data['openid'])->first();
+          $user = User::create($attributes);
         }
 
         // 为用户创建 Jwt
