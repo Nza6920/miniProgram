@@ -8,6 +8,10 @@ class Card extends Model
 {
     public $timestamps = false;
 
+    protected $fillable = [
+      'front','behind'
+    ];
+
     public function user()
     {
         return $this->belongsTo(User::class);

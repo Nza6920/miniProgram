@@ -8,6 +8,10 @@ class Category extends Model
 {
     public $timestamps = false;
 
+    protected $fillable = [
+      'name', 'introduction'
+    ];
+
     public function cards()
     {
         return $this->hasMany(Card::class);

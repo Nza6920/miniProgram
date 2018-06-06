@@ -12,6 +12,10 @@ class User extends Authenticatable implements JWTSubject
 
     public $timestamps = false;
 
+    protected $fillable = [
+      'name','avatar','openid','weixin_session_key'
+    ];
+
     public function cards()
     {
         return $this->hasMany(Card::class);
