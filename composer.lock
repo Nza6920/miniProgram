@@ -1841,16 +1841,16 @@
         },
         {
             "name": "overtrue/wechat",
-            "version": "4.0.25",
+            "version": "4.0.28",
             "source": {
                 "type": "git",
                 "url": "https://github.com/overtrue/wechat.git",
-                "reference": "b6c1f664db100a76a5d555a4f1e90da06fb4f292"
+                "reference": "104cb4fe6f9e204275caa1cf7c10a66cc9f9df1f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/overtrue/wechat/zipball/b6c1f664db100a76a5d555a4f1e90da06fb4f292",
-                "reference": "b6c1f664db100a76a5d555a4f1e90da06fb4f292",
+                "url": "https://api.github.com/repos/overtrue/wechat/zipball/104cb4fe6f9e204275caa1cf7c10a66cc9f9df1f",
+                "reference": "104cb4fe6f9e204275caa1cf7c10a66cc9f9df1f",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -1906,20 +1906,20 @@
                 "weixin",
                 "weixin-sdk"
             ],
-            "time": "2018-05-29T13:13:11+00:00"
+            "time": "2018-06-06T14:07:31+00:00"
         },
         {
             "name": "paragonie/random_compat",
-            "version": "v2.0.12",
+            "version": "v2.99.99",
             "source": {
                 "type": "git",
                 "url": "https://github.com/paragonie/random_compat.git",
-                "reference": "258c89a6b97de7dfaf5b8c7607d0478e236b04fb"
+                "reference": "35469243ebbb9be5086cff57538cac6da2c36852"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/258c89a6b97de7dfaf5b8c7607d0478e236b04fb",
-                "reference": "258c89a6b97de7dfaf5b8c7607d0478e236b04fb",
+                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/35469243ebbb9be5086cff57538cac6da2c36852",
+                "reference": "35469243ebbb9be5086cff57538cac6da2c36852",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -1929,10 +1929,11 @@
                 ]
             },
             "require": {
-                "php": ">=5.2.0"
+                "php": "^7"
             },
             "require-dev": {
-                "phpunit/phpunit": "4.*|5.*"
+                "phpunit/phpunit": "4.*|5.*",
+                "vimeo/psalm": "^1"
             },
             "suggest": {
                 "ext-libsodium": "Provides a modern crypto API that can be used to generate random bytes."
@@ -1957,10 +1958,11 @@
             "description": "PHP 5.x polyfill for random_bytes() and random_int() from PHP 7",
             "keywords": [
                 "csprng",
+                "polyfill",
                 "pseudorandom",
                 "random"
             ],
-            "time": "2018-04-04T21:24:14+00:00"
+            "time": "2018-06-06T05:12:00+00:00"
         },
         {
             "name": "phpdocumentor/reflection-common",

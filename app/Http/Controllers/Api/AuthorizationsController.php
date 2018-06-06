@@ -12,7 +12,6 @@ class AuthorizationsController extends Controller
      public function store(MiniProgramAuthorizationRequest $request)
      {
         $code = $request->code;
-
         // 根据 code 获取微信 openid 和 session_key
         $miniProgram = \EasyWeChat::miniProgram();
         $data = $miniProgram->auth->session($code);
@@ -33,8 +32,8 @@ class AuthorizationsController extends Controller
           $attributes['weixin_session_key'] = $data['session_key'];
 
           User::create($attributes);
-          
-          return $this->response->created();
+
+          $user = User::where('openid',$data['openid'])->first();
         }
 
         // 为用户创建 Jwt
