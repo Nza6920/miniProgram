@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Tymon\JWTAuth\Contracts\JWTSubject;
+use Illuminate\Database\Eloquent\Model;
 
 class User extends Authenticatable implements JWTSubject
 {
@@ -18,12 +19,12 @@ class User extends Authenticatable implements JWTSubject
 
     public function cards()
     {
-        return $this->hasMany(Card::class);
+        return $this->hasMany('App\Models\Card');
     }
 
     public function categories()
     {
-        return $this->hasMany(Category::class);
+        return $this->hasMany('App\Models\Category');
     }
 
     public function getJWTIdentifier()

@@ -14,11 +14,11 @@ class Card extends Model
 
     public function user()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo('App\Models\Card');
     }
 
     public function category()
     {
-        return $this->belongsTo(Category::class);
+        return $this->belongsTo('App\Models\Category');
     }
 }
