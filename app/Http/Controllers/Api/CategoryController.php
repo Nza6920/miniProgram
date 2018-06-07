@@ -20,15 +20,14 @@ class CategoryController extends Controller
      }
 
      // 添加分组
-     public function create(CategoryRequest $request)
+     public function create(CategoryRequest $request,Category $category)
      {
         $user = $this->user();
 
-        $attributes['name'] = $request->name;
-        $attributes['introduction'] = $request->introduction;
-        $attributes['user_id'] = $user->id;
-
-        Category::create($attributes);
+        $category->name = $request->name;
+        $category->introduction = $request->introduction;
+        $category->user_id = $user->id;
+        $category->save();
 
         return $this->response->created();
      }
