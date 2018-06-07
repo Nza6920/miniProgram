@@ -20,12 +20,12 @@ class UserController extends Controller
     {
        $miniProgram = \EasyWeChat::miniProgram();
        $user = $this->user();
-
        $iv = $request->iv;
        $encryptData = $request->encryptedData;
-       $session = $user->weixin_session_key;
+       $session = 'M7JwVYqIl+/afRMfH9cupw==';
+      //  $session = $user->weixin_session_key;
        $decryptedData = $miniProgram->encryptor->decryptData($session, $iv, $encryptData);
-
+       return $decryptedData;
        $user->name = $decryptedData->nickName;
        $user->avatar = $decryptedData->avatarUrl;
 
