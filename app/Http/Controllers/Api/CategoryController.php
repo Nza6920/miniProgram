@@ -29,7 +29,7 @@ class CategoryController extends Controller
         $category->user_id = $user->id;
         $category->save();
 
-        return $this->response->created();
+        return $this->response->item($category, new CategoryTransformer())->setStatusCode(201);
      }
 
      // 编辑分组

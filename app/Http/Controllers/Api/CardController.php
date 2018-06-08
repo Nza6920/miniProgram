@@ -44,7 +44,7 @@ class CardController extends Controller
         $card->user_id = $user->id;
         $card->save();
 
-        return $this->response->created();
+        return $this->response->item($card, new CardTransformer())->setStatusCode(201);
     }
 
     // 编辑卡片
